@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="T8d-Pp-sd9">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--WordSolver-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WordSolver" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="loading word list..." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nih-xq-Rvt">
+                                <rect key="frame" x="0.0" y="114" width="375" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textView>
+                            <activityIndicatorView hidden="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tMT-op-IO5">
+                                <rect key="frame" x="169" y="129" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DXU-hj-mg6">
+                                <rect key="frame" x="0.0" y="255" width="310" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5c-ak-y20">
+                                <rect key="frame" x="-3" y="293" width="56" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <size key="titleShadowOffset" width="2" height="1"/>
+                                <state key="normal" image="doBasicWordFilter_Icon"/>
+                                <connections>
+                                    <action selector="cmdDoBasicFilter_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cTF-Dy-6dm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MgJ-dg-P9Z">
+                                <rect key="frame" x="61" y="293" width="53" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
+                                <state key="normal" image="doFilterStringPattner_Icon"/>
+                                <connections>
+                                    <action selector="cmdFilterStringPattern_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UJd-te-lcM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3be-al-yZl">
+                                <rect key="frame" x="128" y="293" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="doExcludeMultiIndividChars"/>
+                                <connections>
+                                    <action selector="cmdExcludeMultiChars:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qBW-j2-kSF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZ3-dG-eaY">
+                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="reloadWordList_Icon"/>
+                                <connections>
+                                    <action selector="cmdReloadWL_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vso-Xl-Ni2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShT-kW-ZBJ">
+                                <rect key="frame" x="194" y="293" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="returnWordsWithStringPattern"/>
+                                <connections>
+                                    <action selector="cmdReturnStringFilter_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ptm-hc-XeR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uPK-fR-c8n">
+                                <rect key="frame" x="260" y="293" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="includeOnlyChars"/>
+                                <connections>
+                                    <action selector="cmdIncludeMultiINDV_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IgQ-4z-YKJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYp-qp-jZ4">
+                                <rect key="frame" x="325" y="293" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="excludeCharsAtPos"/>
+                                <connections>
+                                    <action selector="cmdExcludeCharsAtPos_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cYM-Ys-cqj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Stx-zK-eN1">
+                                <rect key="frame" x="325" y="256" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="cmdClear_Click:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hV2-zc-6t8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m56-2p-syT">
+                                <rect key="frame" x="260" y="364" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="keyboardExit"/>
+                                <connections>
+                                    <action selector="cmdDismissKeyboard_Tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GnU-pJ-bSi"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i2U-36-OXY">
+                                <rect key="frame" x="0.0" y="415" width="375" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ev8-dW-Rsd">
+                                <rect key="frame" x="0.0" y="351" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="prfxSufx"/>
+                                <connections>
+                                    <action selector="cmdPreSufx_Tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3zk-N7-1fu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="WordSolver" id="vGm-cm-MtU"/>
+                    <connections>
+                        <outlet property="cmdClear" destination="Stx-zK-eN1" id="Inf-f8-rFN"/>
+                        <outlet property="cmdDoBasicFilter" destination="u5c-ak-y20" id="5U4-nB-NJd"/>
+                        <outlet property="cmdExcludeCharsAtPos" destination="iYp-qp-jZ4" id="ljB-Ju-iFY"/>
+                        <outlet property="cmdExcludeMultiIndividualChars" destination="3be-al-yZl" id="KuD-6o-pvO"/>
+                        <outlet property="cmdFilterStringPattern" destination="MgJ-dg-P9Z" id="Hf2-VX-upw"/>
+                        <outlet property="cmdIncludeMultiINDV" destination="uPK-fR-c8n" id="7Aj-Br-lT6"/>
+                        <outlet property="cmdKeyboardBack" destination="m56-2p-syT" id="XJx-RV-sXs"/>
+                        <outlet property="cmdPreSufx" destination="Ev8-dW-Rsd" id="98F-h9-b3i"/>
+                        <outlet property="cmdReloadWL" destination="rZ3-dG-eaY" id="bs4-QR-vUG"/>
+                        <outlet property="cmdReturnStringFilter" destination="ShT-kW-ZBJ" id="frc-Kn-Mr1"/>
+                        <outlet property="progIndicator" destination="tMT-op-IO5" id="J21-rA-aQN"/>
+                        <outlet property="txtBlockWorldListText" destination="Nih-xq-Rvt" id="5cq-yP-Cfb"/>
+                        <outlet property="txtFilter" destination="DXU-hj-mg6" id="YJl-u8-AVL"/>
+                        <outlet property="txtViewLetterCount" destination="i2U-36-OXY" id="NAV-fO-dPL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.60000000000002" y="777.66116941529242"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="X36-YV-20f">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T8d-Pp-sd9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="QRn-lf-EJG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="7Ko-XO-aXZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jpu-6W-Q4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-156" y="777.66116941529242"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doBasicWordFilter_Icon" width="50" height="50"/>
+        <image name="doExcludeMultiIndividChars" width="50" height="50"/>
+        <image name="doFilterStringPattner_Icon" width="50" height="50"/>
+        <image name="excludeCharsAtPos" width="50" height="50"/>
+        <image name="includeOnlyChars" width="50" height="50"/>
+        <image name="keyboardExit" width="50" height="50"/>
+        <image name="prfxSufx" width="50" height="50"/>
+        <image name="reloadWordList_Icon" width="50" height="50"/>
+        <image name="returnWordsWithStringPattern" width="50" height="50"/>
+    </resources>
+</document>
